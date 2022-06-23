@@ -60,10 +60,10 @@ class WC_TTO_Add_Product
             'select_type_product' => $product['product_type'] ?? '',
         );
 
-//        if (!empty($thumbnail_id)){
-//
-//            $args['_thumbnail_id'] = $thumbnail_id;
-//        }
+        if (!empty($thumbnail_id)){
+
+            $args['_thumbnail_id'] = $thumbnail_id;
+        }
 
         foreach ($args as $key => $value) {
 
