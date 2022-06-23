@@ -47,7 +47,7 @@ class WC_TTO_Add_Product
 
         if (!empty($_FILES['wp_custom_attachment']['name'])) {
 
-            return $thumbnail_id = WC_TTO_Product::save_file_image();
+            $thumbnail_id = WC_TTO_Product::save_file_image();
         }
 
 
