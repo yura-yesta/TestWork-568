@@ -50,7 +50,6 @@ class WC_TTO_Add_Product
             $thumbnail_id = WC_TTO_Product::save_file_image();
         }
 
-
         $args = array(
             '_visibility' => 'visible',
             '_stock_status' => 'instock',
@@ -58,12 +57,8 @@ class WC_TTO_Add_Product
             '_regular_price' => $product['product_price'] ?? 0,
             '_price' => $product['product_price'] ?? 0,
             'select_type_product' => $product['product_type'] ?? '',
+            '_thumbnail_id' => $thumbnail_id ?? ''
         );
-
-        if (!empty($thumbnail_id)){
-
-            $args['_thumbnail_id'] = $thumbnail_id;
-        }
 
         foreach ($args as $key => $value) {
 
